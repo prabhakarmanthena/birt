@@ -219,7 +219,7 @@ public class Bubble extends Scatter
 				faY[i] = srh.getLocationOnOrthogonal( be.getValue( ) );
 			}
 			
-			dSizePixel[i] = be.getSize( ) * dPointCoefficient;
+			dSizePixel[i] = Math.sqrt(be.getSize( ))  * dPointCoefficient;
 			// Set bubble size measured by points because of the arguments of
 			// MarkerRender
 			iSize[i] = Integer.valueOf( (int) ( dSizePixel[i] / getDeviceScale( ) ) );
